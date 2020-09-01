@@ -30,7 +30,7 @@ spec:
                   sh """
                       helm repo add stable https://kubernetes-charts.storage.googleapis.com
 		      helm repo update
-		      helm install prometheus-operator stable/prometheus-operator --namespace monitor --set grafana.service.type=NodePort
+		      helm install prometheus-operator stable/prometheus-operator --namespace monitor --set grafana.service.type=NodePort -f values.yaml
                   """
               }
           }
